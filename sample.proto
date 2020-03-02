@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "me.gogosing.sample.proto";
+option java_outer_classname = "SampleServiceProto";
+
+service Sample {
+    rpc GetMessage (MessageRequest) returns (MessageResponse) { }
+}
+
+message MessageRequest {
+    string contents = 1;
+}
+
+message MessageResponse {
+    string contents = 1;
+}
